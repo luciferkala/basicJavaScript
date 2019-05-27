@@ -1,19 +1,15 @@
 const clockContainer = document.querySelector(".js-clock");
-const clockTitle = clockContainer.querySelector(".js-title");
-const nameButton = document.getElementsByClassName(".input-btn");
-const nameInput = document.querySelector(".input-name");
+const clockTitle = clockContainer.querySelector("h1");
 
 function getTime() {
-    const date = new Date();
-    const minutes = date.getMinutes();
-    const hours = date.getHours();
-    const seconds = date.getSeconds();
-    clockTitle.innerHTML =  `${hours < 10 ? `0${hours}` : hours}:${minutes < 10 ? `0${minutes}` : minutes}:${seconds < 10 ? `0${seconds}` : seconds}`;
+	const date = new Date();
+	const minutes = date.getMinutes();
+	const hours = date.getHours();
+	const seconds = date.getSeconds();
+	clockTitle.innerText = `${hours}:${minutes}:${seconds}`;
 }
-
 function init() {
-    getTime();
-    setInterval(getTime, 1000);
+	getTime();
 }
 
 init();
