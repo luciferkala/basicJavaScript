@@ -15,24 +15,31 @@ body {
   transform: translate(-50%, -50%);
 }
 .content form {
-	border: none;
-	border-bottom: 2px #f7f7f7 solid;
-	margin-bottom: 10px;
+  border: none;
+  border-bottom: 2px #f7f7f7 solid;
+  margin-bottom: 10px;
 }
 .content form input {
-	border: none;
-	background-color: transparent;
-	font-weight: 600;
-	font-size: 30px;
+  border: none;
+  background-color: transparent;
+  font-weight: 600;
+  font-size: 30px;
+
+  color: #f7f7f7;
+}
+.js-toDoList {
+  margin-top: 15px;
+}
+.js-toDoList li {
+  margin-bottom: 5px;
 }
 .content .js-clock {
   font-size: 60px;
   margin-bottom: 15px;
 }
 .content .js-greetings {
-	font-size: 30px;
-	color: #f7f7f7;
-	margin-bottom: 10px;
+  font-size: 30px;
+  margin-bottom: 10px;
 }
 .js-weather {
   position: absolute;
@@ -42,10 +49,21 @@ body {
   color: #f7f7f7;
 }
 
-.btn {
-  cursor: pointer;
+button {
+  margin-right: 5px;
+  border: none;
+  background-color: transparent;
 }
-
+span {
+  font-size: 20px;
+  font-weight: 400;
+}
+.toDo-span {
+  font-size: 30px;
+  font-weight: 600;
+  color: #f7f7f7;
+  margin-top: 15px;
+}
 .form,
 .greetings {
   display: none;
@@ -70,4 +88,7 @@ body {
   height: 100%;
   z-index: -1;
   animation: fadeIn 0.5s linear;
+}
+::placeholder {
+	color:#f7f7f7;
 }
