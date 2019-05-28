@@ -10,9 +10,9 @@ function getWeather(lat, lng) {
       return response.json();
     })
     .then(function(json) {
-	    const temparature = json.main.temp;
-	    const place = json.main.name;
-	    weather.innerText = `${temparature} @ ${place}`;
+      const temparature = json.main.temp;
+      const place = json.main.name;
+      weather.innerText = `${temparature} @ ${place}`;
     });
 }
 function saveCoords(coordsObj) {
