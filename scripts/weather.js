@@ -4,7 +4,7 @@ const COORDS = 'coords';
 
 function getWeather(lat, lng) {
   fetch(
-    `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lng}&appid=${API_KEY}&units=metric`
+    `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lng}&appid=${API_KEY}&units=metric`,
   )
     .then(function(response) {
       return response.json();
@@ -12,7 +12,7 @@ function getWeather(lat, lng) {
     .then(function(json) {
       const temparature = json.main.temp;
       const place = json.name;
-      weather.innerText = `${temparature} @ ${place}`;
+      weather.innerText = `${temparature}\n${place}`;
     });
 }
 function saveCoords(coordsObj) {
